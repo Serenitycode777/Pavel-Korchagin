@@ -1,0 +1,113 @@
+/* Тёмная тема: космический стиль (тёмный фон, стеклянные блоки, золото как акцент). Подключается, когда включена тёмная тема. */
+:root {
+  color-scheme: dark;
+  --bg: #0b0e20;
+  --card: rgba(255, 255, 255, 0.07);
+  --ink: #e9e7f6;
+  --muted: #aeacc9;
+  --line: rgba(255, 255, 255, 0.15);
+  --lavender: rgba(255, 255, 255, 0.09);
+  --lavender-2: rgba(255, 255, 255, 0.22);
+  --purple: #cbb9ff;
+  --purple-deep: #ffffff;
+  --purple-soft: #b9a6f0;
+  --gold: #f6c978;
+  --shadow: 0 18px 50px rgba(2, 3, 14, 0.4);
+}
+html { background: #0b0e20; }
+body { isolation: isolate; background: #0b0e20; }
+body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(55% 40% at 82% 6%, rgba(126, 96, 226, 0.22), transparent 70%),
+    radial-gradient(48% 40% at 6% 42%, rgba(70, 112, 206, 0.16), transparent 70%),
+    radial-gradient(52% 38% at 92% 92%, rgba(255, 186, 104, 0.07), transparent 70%),
+    linear-gradient(180deg, #10142b 0%, #151a36 50%, #0b0e20 100%); }
+body::after { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; background-repeat: no-repeat;
+  background-image:
+    radial-gradient(1.5px 1.5px at 22% 54%, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1.5px 1.5px at 62% 28%, rgba(255,255,255,0.65), transparent),
+    radial-gradient(1px 1px at 65% 68%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1.8px 1.8px at 2% 48%, rgba(255,255,255,1), transparent),
+    radial-gradient(1px 1px at 9% 19%, rgba(255,255,255,0.65), transparent),
+    radial-gradient(1.5px 1.5px at 89% 6%, rgba(255,255,255,1), transparent),
+    radial-gradient(1px 1px at 79% 57%, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 70% 64%, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 3% 20%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 3% 59%, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 52% 63%, rgba(255,255,255,0.65), transparent),
+    radial-gradient(1.5px 1.5px at 86% 5%, rgba(255,255,255,0.65), transparent),
+    radial-gradient(1px 1px at 10% 26%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1.5px 1.5px at 16% 72%, rgba(255,255,255,1), transparent),
+    radial-gradient(1px 1px at 26% 44%, rgba(255,255,255,1), transparent),
+    radial-gradient(1.5px 1.5px at 38% 47%, rgba(255,255,255,1), transparent),
+    radial-gradient(1.5px 1.5px at 41% 63%, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 4% 12%, rgba(255,255,255,1), transparent); }
+h1, h2, h3, h4, .brand { font-family: "Tenor Sans", "Montserrat", -apple-system, "Segoe UI", Arial, sans-serif; font-weight: 400; }
+body { font-family: "Mulish", -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+.brand { color: var(--gold); }
+.brand-sub { color: var(--muted); }
+
+/* вход */
+.login-page { background: none; }
+.login-card { background: rgba(255, 255, 255, 0.07); border: 1px solid rgba(255, 255, 255, 0.16); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); box-shadow: 0 24px 70px rgba(2, 3, 14, 0.5), 0 0 60px rgba(246, 201, 120, 0.08); }
+.login-card h1 { color: #fff; font-weight: 400; }
+.code-input { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.22); color: #fff; }
+.code-input:focus { border-color: var(--gold); box-shadow: 0 0 0 4px rgba(246, 201, 120, 0.18); }
+.btn { background: rgba(246, 201, 120, 0.22); border: 1px solid rgba(246, 201, 120, 0.75); color: #ffe6b8; border-radius: 999px; box-shadow: 0 0 34px rgba(246, 201, 120, 0.24); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+.btn:hover { background: rgba(246, 201, 120, 0.36); }
+.error { color: #ff9bab; }
+
+/* страница практик */
+.top { background: none; padding: 40px 0 8px; }
+.top .brand { color: var(--gold); }
+.top h1 { color: #fff; }
+.top p { color: #d7d0f0; }
+.logout { color: #cfc8ee; }
+.tips, .practice { background: rgba(255, 255, 255, 0.07); border: 1px solid rgba(255, 255, 255, 0.15); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); box-shadow: 0 18px 50px rgba(2, 3, 14, 0.35); }
+.tips { margin-top: 26px; }
+.tips h2 { color: var(--gold); }
+.practice h3 { color: #fff; }
+.num { background: rgba(246, 201, 120, 0.16); border: 1px solid rgba(246, 201, 120, 0.5); color: var(--gold); }
+.tag { background: rgba(185, 166, 240, 0.18); color: #cbb9ff; }
+.info > div { background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1); }
+.info b { color: var(--gold); }
+.more { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.28); color: #fff; border-radius: 999px; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+.more:hover { background: rgba(255, 255, 255, 0.16); border-color: rgba(246, 201, 120, 0.7); }
+.poster { background:
+    radial-gradient(46% 60% at 88% 78%, rgba(255, 186, 104, 0.32), transparent 70%),
+    radial-gradient(44% 56% at 10% 22%, rgba(88, 116, 255, 0.30), transparent 70%),
+    linear-gradient(180deg, #2b1b5e 0%, #14102f 100%); border: 1px solid rgba(255, 255, 255, 0.14); }
+.p-kicker { color: var(--gold); }
+.play-btn { background: rgba(246, 201, 120, 0.22); border: 1px solid rgba(246, 201, 120, 0.8); box-shadow: 0 0 34px rgba(246, 201, 120, 0.35); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+.play-btn::after { border-left-color: #ffe6b8; }
+.author { background: rgba(255, 255, 255, 0.07); border: 1px solid rgba(255, 255, 255, 0.14); }
+.author .mono { background: rgba(246, 201, 120, 0.2); border: 1px solid rgba(246, 201, 120, 0.6); color: var(--gold); }
+.author b { color: #fff; }
+
+/* окно описания практики */
+dialog.modal { background: rgba(18, 22, 46, 0.97); border: 1px solid rgba(255, 255, 255, 0.16); color: var(--ink); }
+.modal-head { border-bottom-color: rgba(255, 255, 255, 0.14); }
+.modal-head h3 { color: #fff; }
+.x { background: rgba(255, 255, 255, 0.1); color: #fff; }
+.modal-body h4 { color: var(--gold); }
+.modal-actions { background: rgba(18, 22, 46, 0.97); border-top-color: rgba(255, 255, 255, 0.14); }
+.act { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.28); color: #fff; }
+.act.primary { background: rgba(246, 201, 120, 0.22); border-color: rgba(246, 201, 120, 0.75); color: #ffe6b8; }
+.act.primary:hover { background: rgba(246, 201, 120, 0.36); border-color: rgba(246, 201, 120, 0.9); }
+
+.theme-toggle { color: var(--gold); border-color: rgba(255, 255, 255, 0.22); background: rgba(255, 255, 255, 0.08); }
+
+.top .brand { color: var(--gold); }
+.top-card, .login-card .brand-box { box-shadow: none; }
+.brand-box { margin-inline: -32px; }
+.pnav { background: rgba(255, 255, 255, 0.07); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+.pnav a:first-child .n { background: var(--gold); color: #1a1530; }
+.pnav a:first-child .n { background: var(--lavender); color: var(--purple); }
+.pnav a.on .n { background: var(--gold); color: #1a1530; }
+.pnav a.on { color: #fff; }
+.pnav a, .pnav a:first-child { background: rgba(255, 255, 255, 0.08); color: #dcd2ff; border-color: rgba(255, 255, 255, 0.18); }
+.pnav a.on, .pnav a.on:first-child { background: var(--gold); color: #1a1530; border-color: var(--gold); }
+.pnav a.on .n { color: #1a1530; }
+.pall { background: rgba(255, 255, 255, 0.07); }
+.pall a.on .n { background: var(--gold); color: #1a1530; }
+.pall a, .pall a:hover, .pall a.on { background: none; }
