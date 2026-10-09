@@ -105,8 +105,12 @@ def client_ip(request) -> str:
 
 def too_many(ip) -> bool:
     now = time.time()
-    FAILS[ip] = [t for t in FAILS.get(ip, []) if now - t < WINDOW]
-    return len(FAILS[ip]) >= MAX_FAILS
+    recent = [t for t in FAILS.get(ip, []) if now - t < WINDOW]
+    if recent:
+        FAILS[ip] = recent
+    else:
+        FAILS.pop(ip, None)  # не копим адреса без недавних ошибок
+    return len(recent) >= MAX_FAILS
 
 
 # ---------- страницы ----------
@@ -154,6 +158,7 @@ def login_page(error: str = "") -> str:
       <button class="btn" type="submit">{E(L["button"])}</button>
       <p class="error" role="alert">{E(error)}</p>
     </form>
+    <p class="hint"><a href="https://t.me/{E(S["telegram"])}" target="_blank" rel="noopener">{E(L["no_code"])}</a></p>
   </div>
 </main>"""
     return page(f'{S["title"]}: вход', body)
