@@ -19,7 +19,7 @@ extra_actions:
     text: "Записаться на диагностику"
     url: "http://pavelkorchagin.com/freesession"
   question:
-    note: "Паша отвечает в Telegram в течение 24 часов. Доступно 10 дней после покупки"
+    note: "Павел отвечает в Telegram в течение 24 часов. Доступно 14 дней после покупки"
     text: "Задать вопрос в Telegram"
 
 login:
